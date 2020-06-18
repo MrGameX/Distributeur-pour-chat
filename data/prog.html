@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<title>Distributeur automatique</title>
+		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	    <link rel='shortcut icon' type='image/x-icon' href='claw.ico' />
+	</head>
+	<body>
+
+		<section id="menu">
+
+			<div class="title">
+				<i class="fas fa-paw"></i> 
+				<h1>Distributeur automatique</h1>
+			</div>
+
+			<hr>
+
+			<div class="nav">
+
+				<ul>
+					<li><a href="/"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+					<li id="active"><a href="prog.html"><i class="fas fa-cogs"></i> Programmateur</a></li>
+					<li><a href="manuel.html"><i class="fas fa-sliders-h"></i> Manuel</a></li>
+					<li><a href="infos.html"><i class="fas fa-info-circle"></i> Plus d'infos</a></li>
+					<li><a href="led.html"><i class="far fa-lightbulb"></i> Led</a></li>
+				</ul>
+
+
+			</div>
+
+		</section>
+
+		<section id="content">
+			
+			<div class="nav-bar">
+				
+				<ul>
+					<li><a href="#"><i class="fas fa-plus"></i></a></li>
+					<li><a href="#"><i class="fas fa-search"></i></a></li>
+				</ul>
+
+
+				<a class="icon">
+					<i class="fa fa-bars"></i>
+				</a>
+				<p>Programmateur</p>
+
+			</div>
+
+			<div id="hamburger-sidebar" class="sidebar">
+				<div id="hamburger-sidebar-header"></div>
+				<div id="hamburger-sidebar-body"></div>
+			</div>
+			<div id="hamburger-overlay" class="overlay"></div>
+
+			<div class="reservoir">
+				<div class="place_1">
+
+					<div class="reservoir_1 timeProgColor1">
+						<h1 style="text-align: center;">Timer Configurations</h1>
+						<form>
+							<div class="check">
+								<br /><br />
+								<input type="checkbox" name="eau" value="true" />
+								<label for="eau">Eau</label>
+								<input type="checkbox" name="croq" value="true" />
+								<label for="croq">Croquettes</label>
+
+								<br /><br /><br />
+							</div>
+
+							<div class="timeChoice">
+								<span class="subtitle">Heures:</span>
+								<input type="number" name="h" min="0" max="23" step="1" />
+								<span class="subtitle">Minutes</span>
+								<input type="number" name="m" min="0" max="59" step="1" />
+								</br><br /><br />
+								<input class="submit" type="submit">
+							</div>
+						</form>
+						<br />
+						<p id="alert">%alert%</p>
+
+						<!-- <div class="level">
+
+						</div> -->
+					</div>
+
+					
+
+				</div>
+
+				<div class="place_1 place_2">
+
+					<div class="reservoir_1 reservoir_2 timeProgColor2">
+						<h1 class="timeProgTitle">Timers</h1>
+						<div class="timeProg">
+							<p id="time1">%time1% <a>&#10060;</a></p>
+							<p id="time2">%time2% <a>&#10060;</a></p>
+							<p id="time3">%time3% <a>&#10060;</a></p>
+							<p id="time4">%time4% <a>&#10060;</a></p>
+							<p id="time5">%time5% <a>&#10060;</a></p>
+						</div>
+
+						<!-- <div class="level level2">
+
+						</div> -->
+					</div>	
+
+					
+
+				</div>
+
+			</div>
+			
+
+					
+		</section>
+
+	</body>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+
+		window.onload = (event) => {
+			var time1 = document.getElementById("time1");
+			var time2 = document.getElementById('time2');
+			var time3 = document.getElementById('time3');
+			var time4 = document.getElementById('time4');
+			var time5 = document.getElementById('time5');
+
+			if (time1.textContent.includes("h")) {
+				time1.children[0].setAttribute("style", "display: inline");
+			}
+			if (time2.textContent.includes("h")) {
+				time2.children[0].setAttribute("style", "display: inline");
+			}
+			if (time3.textContent.includes("h")) {
+				time3.children[0].setAttribute("style", "display: inline");
+			}
+			if (time4.textContent.includes("h")) {
+				time4.children[0].setAttribute("style", "display: inline");
+			}
+			if (time5.textContent.includes("h")) {
+				time5.children[0].setAttribute("style", "display: inline");
+			}
+		};
+		
+	</script>
+</html>

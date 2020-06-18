@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Distributeur automatique</title>
+		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	    <link rel='shortcut icon' type='image/x-icon' href='claw.ico' />
+	</head>
+	<body>
+		<section id="menu">
+			<div class="title">
+				<i class="fas fa-paw"></i> 
+				<h1>Distributeur automatique</h1>
+			</div><hr>
+			<div class="nav">
+				<ul>
+					<li id="active"><a href="/"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+					<li><a href="prog.html"><i class="fas fa-cogs"></i> Programmateur</a></li>
+					<li><a href="manuel.html"><i class="fas fa-sliders-h"></i> Manuel</a></li>
+					<li><a href="infos.html"><i class="fas fa-info-circle"></i> Plus d'infos</a></li>
+					<li><a href="led.html"><i class="far fa-lightbulb"></i> Led</a></li>
+				</ul>
+			</div>
+		</section>
+		<section id="content">
+			<div class="nav-bar">
+				<ul>
+					<li><a href="#"><i class="fas fa-plus"></i></a></li>
+					<li><a href="#"><i class="fas fa-search"></i></a></li>
+				</ul>
+				<a class="icon">
+					<i class="fa fa-bars"></i>
+				</a>
+				<p id="test">Dashboard %TIME%</p>
+			</div>
+			<div id="hamburger-sidebar" class="sidebar">
+				<div id="hamburger-sidebar-header"></div>
+				<div id="hamburger-sidebar-body"></div>
+			</div>
+			<div id="hamburger-overlay" class="overlay"></div>
+			<div class="reservs">
+				<div class="reservoir_eau reservoir_croq">
+					<div class="level1">
+						<div class="niv">
+							<h1>80%%</h1>
+						</div>
+					</div>
+				</div>
+				<div class="state">
+					<div class="infos">
+						<p><i class="fas fa-water"></i> 4 / 5<span>L </span></p>
+						<hr class="hr">
+						<p>80 <span>%%</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="reservs reservs_">
+				<div class="reservoir_croq">
+					<div class="level1 level2">
+						<div class="niv">
+							<h1>30%%</h1>
+						</div>
+					</div>
+				</div>
+				<div class="state">
+					<div class="infos infos2">
+						<p><i class="fas fa-utensils"></i> 1.5 / 5<span>L </span></p>
+						<hr class="hr">
+						<p>30 <span>%%</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script type="text/javascript" src="script.js"></script>
+</html>
